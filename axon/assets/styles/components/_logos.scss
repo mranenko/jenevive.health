@@ -1,0 +1,22 @@
+.logo.jenevive {
+  display: flex;
+  flex-direction: row;
+  font-family: var(--font-family-logo);
+  font-size: 1.75rem;
+  letter-spacing: 1.3125rem;
+  text-transform: uppercase;
+
+  span:first-of-type {
+    color: var(--color-foreground-contrast);
+  }
+
+  span:last-of-type {
+    color: var(--color-secondary);
+  }
+}
+
+@media (min-width: 90rem) {
+  .logo.jenevive {
+    font-size: 2rem;
+  }
+}

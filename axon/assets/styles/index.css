@@ -54,8 +54,16 @@
   --font-family-logo: "Asap Condensed", sans-serif;
   --font-family-text: "Poppins", sans-serif;
   --font-family-title: "Poppins", sans-serif;
+  --font-size-text: .875rem;
+  --font-size-title-1: 2.25rem;
 }
 
+@media (min-width: 90rem) {
+  :root {
+    --font-size-text: 1rem;
+    --font-size-title-1: 2.5rem;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -69,17 +77,88 @@ body {
 }
 
 body {
-  background: var(--color-background-light);
-  color: var(--color-foreground);
+  background: var(--color-primary);
+  color: var(--color-foreground-contrast);
   font-family: var(--font-family-text);
+  font-size: var(--font-size-text);
 }
 
+h1 {
+  font-size: var(--font-size-title-1);
+  font-weight: 600;
+  letter-spacing: 0.25rem;
+  line-height: 1.25;
+  text-transform: uppercase;
+}
+
+footer {
+  background: none;
+  color: inherit;
+}
+
+footer .content {
+  padding: 3.5rem 1.5rem;
+}
+
+@media (min-width: 64rem) {
+  footer .content {
+    padding: 5rem 2rem;
+  }
+}
+header {
+  background: none;
+  color: inherit;
+  display: flex;
+}
+
+header .content {
+  padding: 2.5rem 1.5rem;
+}
+
+@media (min-width: 64rem) {
+  header .content {
+    padding: 3rem 2rem;
+  }
+}
+.logo.jenevive {
+  display: flex;
+  flex-direction: row;
+  font-family: var(--font-family-logo);
+  font-size: 1.75rem;
+  letter-spacing: 1.3125rem;
+  text-transform: uppercase;
+}
+.logo.jenevive span:first-of-type {
+  color: var(--color-foreground-contrast);
+}
+.logo.jenevive span:last-of-type {
+  color: var(--color-secondary);
+}
+
+@media (min-width: 90rem) {
+  .logo.jenevive {
+    font-size: 2rem;
+  }
+}
 main {
   align-items: center;
+  background: none;
+  color: inherit;
   display: flex;
-  justify-content: center;
-  min-height: 100vh;
-  width: 100%;
+}
+
+main .content {
+  padding: 2.5rem 1.5rem;
+}
+
+@media (min-width: 90rem) {
+  main .content {
+    padding: 8rem 2rem;
+  }
+}
+.page {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
 }
 
 /*# sourceMappingURL=index.css.map */

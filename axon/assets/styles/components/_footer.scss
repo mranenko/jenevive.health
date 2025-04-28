@@ -1,0 +1,14 @@
+footer {
+  background: none;
+  color: inherit;
+}
+
+footer .content {
+  padding: 3.5rem 1.5rem;
+}
+
+@media (min-width: 64rem) {
+  footer .content {
+    padding: 5rem 2rem;
+  }
+}

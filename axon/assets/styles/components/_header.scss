@@ -1,0 +1,15 @@
+header {
+  background: none;
+  color: inherit;
+  display: flex;
+}
+
+header .content {
+  padding: 2.5rem 1.5rem;
+}
+
+@media (min-width: 64rem) {
+  header .content {
+    padding: 3rem 2rem;
+  }
+}

@@ -11,15 +11,16 @@ body {
 }
 
 body {
-  background: var(--color-background-light);
-  color: var(--color-foreground);
+  background: var(--color-primary);
+  color: var(--color-foreground-contrast);
   font-family: var(--font-family-text);
+  font-size: var(--font-size-text);
 }
 
-main {
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  min-height: 100vh;
-  width: 100%;
+h1 {
+  font-size: var(--font-size-title-1);
+  font-weight: 600;
+  letter-spacing: .25rem;
+  line-height: 1.25;
+  text-transform: uppercase;
 }
