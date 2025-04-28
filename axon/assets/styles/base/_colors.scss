@@ -1,0 +1,55 @@
+:root {
+  --color-night-10: hsl(236 50% 99%);
+  --color-night-20: hsl(236 50% 96%);
+  --color-night-30: hsl(236 50% 92%);
+  --color-night-40: hsl(236 50% 87%);
+  --color-night-50: hsl(236 50% 80%);
+  --color-night-60: hsl(236 50% 72%);
+  --color-night-70: hsl(236 50% 64%);
+  --color-night-80: hsl(236 50% 56%);
+  --color-night-90: hsl(236 50% 48%);
+  --color-night-100: hsl(236 50% 40%);
+  --color-night-110: hsl(236 50% 32%);
+  --color-night-120: hsl(236 50% 26%);
+  --color-night-130: hsl(236 50% 20%);
+  
+  --color-turquoise-10: hsl(186 72% 99%);
+  --color-turquoise-20: hsl(186 72% 96%);
+  --color-turquoise-30: hsl(186 72% 92%);
+  --color-turquoise-40: hsl(186 72% 87%);
+  --color-turquoise-50: hsl(186 72% 80%);
+  --color-turquoise-60: hsl(186 72% 72%);
+  --color-turquoise-70: hsl(186 72% 64%);
+  --color-turquoise-80: hsl(186 72% 56%);
+  --color-turquoise-90: hsl(186 72% 48%);
+  --color-turquoise-100: hsl(186 72% 40%);
+  --color-turquoise-110: hsl(186 72% 32%);
+  --color-turquoise-120: hsl(186 72% 26%);
+  --color-turquoise-130: hsl(186 72% 20%);
+
+  --color-mist-10: hsl(236 10% 99%);
+  --color-mist-20: hsl(236 10% 96%);
+  --color-mist-30: hsl(236 10% 92%);
+  --color-mist-40: hsl(236 10% 87%);
+  --color-mist-50: hsl(236 10% 80%);
+  --color-mist-60: hsl(236 10% 72%);
+  --color-mist-70: hsl(236 10% 64%);
+  --color-mist-80: hsl(236 10% 56%);
+  --color-mist-90: hsl(236 10% 48%);
+  --color-mist-100: hsl(236 10% 40%);
+  --color-mist-110: hsl(236 10% 32%);
+  --color-mist-120: hsl(236 10% 26%);
+  --color-mist-130: hsl(236 10% 20%);
+
+  --color-primary: var(--color-night-130);
+  --color-secondary: var(--color-turquoise-70);
+
+  --color-background: var(--color-mist-20);
+  --color-background-dark: var(--color-mist-30);
+  --color-background-light: var(--color-mist-10);
+  --color-border: var(--color-mist-40);
+
+  --color-foreground: var(--color-mist-130);
+  --color-foreground-contrast: var(--color-mist-10);
+  --color-foreground-subtle: var(--color-mist-70);
+}
