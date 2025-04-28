@@ -36,6 +36,10 @@ npm start
 
 ### Netlify Setup
 
-TBD
+Base folder:
+`axon`
+
+Netlify URL:
+https://jenevive.netlify.app
 
 ---
