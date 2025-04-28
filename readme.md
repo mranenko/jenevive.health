@@ -34,7 +34,15 @@ npm start
 ---
 
 
-### Netlify Setup
+### Github
+
+Repository:
+https://github.com/mranenko/jenevive.health
+
+---
+
+
+### Netlify
 
 Base folder:
 `axon`
