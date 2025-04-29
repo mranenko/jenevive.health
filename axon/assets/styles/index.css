@@ -50,6 +50,23 @@
   --color-foreground-subtle: var(--color-mist-70);
 }
 
+/*
+  .5rem = 8px
+  .625rem = 10px
+  .75rem = 12px
+  .875rem = 14px
+  1rem = 16px
+  1.25rem = 20px
+  1.5rem = 24px
+  1.625rem = 26px
+  1.75rem = 28px
+  1.875rem = 30px
+  2rem = 32px
+  2.25rem = 36px
+  2.5rem = 40px
+  3.75rem = 60px
+  5rem = 60px
+*/
 :root {
   --font-family-logo: "Asap Condensed", sans-serif;
   --font-family-text: "Poppins", sans-serif;
@@ -65,6 +82,7 @@
   }
 }
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
@@ -83,6 +101,13 @@ body {
   font-size: var(--font-size-text);
 }
 
+a, button {
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+  text-decoration: none;
+}
+
 h1 {
   font-size: var(--font-size-title-1);
   font-weight: 600;
@@ -91,46 +116,92 @@ h1 {
   text-transform: uppercase;
 }
 
-footer {
+footer,
+header,
+main {
+  align-items: center;
   background: none;
   color: inherit;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: start;
+  width: 100%;
 }
 
-footer .content {
+.page {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+.content {
   display: flex;
-  padding: 3.5rem 1.5rem;
+  flex-direction: column;
+  padding: 4rem 1.5rem;
   max-width: 75rem;
+  width: 100%;
 }
 
+@media (min-width: 64rem) {
+  .content {
+    padding: 5rem 2rem;
+  }
+}
 footer .social-icons {
   font-size: 1.25rem;
   gap: 0.75rem;
 }
 
-@media (min-width: 64rem) {
-  footer .content {
-    padding: 5rem 2rem;
-  }
+@media (min-width: 90rem) {
   footer .social-icons {
     font-size: 1.25rem;
     gap: 1rem;
   }
 }
 header {
-  background: none;
-  color: inherit;
-  display: flex;
+  justify-content: center;
 }
 
 header .content {
-  padding: 2.5rem 1.5rem;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 2.5rem;
+  padding-top: 2.5rem;
+}
+
+header .nav-toggle {
+  align-items: end;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 1.125rem;
+  width: 2rem;
+}
+header .nav-toggle span {
+  background: var(--color-foreground-contrast);
+  border-radius: 0.125rem;
+  height: 0.125rem;
+  width: 100%;
+}
+header .nav-toggle span:last-of-type {
+  width: 1.125rem;
 }
 
 @media (min-width: 64rem) {
   header .content {
-    padding: 3rem 2rem;
+    padding-bottom: 3rem;
+    padding-top: 3rem;
+  }
+}
+@media (min-width: 90rem) {
+  header .nav-toggle {
+    height: 1.2rem;
+    width: 2.25rem;
+  }
+  header .nav-toggle span {
+    height: 0.125rem;
+  }
+  header .nav-toggle span:last-of-type {
+    width: 1.25rem;
   }
 }
 .logo.jenevive {
@@ -139,6 +210,7 @@ header .content {
   font-family: var(--font-family-logo);
   font-size: 1.25rem;
   letter-spacing: 0.625rem;
+  line-height: 1;
   text-transform: uppercase;
 }
 .logo.jenevive span:first-of-type {
@@ -154,27 +226,6 @@ header .content {
     letter-spacing: 0.75rem;
   }
 }
-main {
-  align-items: center;
-  background: none;
-  color: inherit;
-  display: flex;
-}
-
-main .content {
-  padding: 2.5rem 1.5rem;
-}
-
-@media (min-width: 90rem) {
-  main .content {
-    padding: 8rem 2rem;
-  }
-}
-.page {
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-}
-
 .stack {
   display: flex;
 }
