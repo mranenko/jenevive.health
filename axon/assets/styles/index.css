@@ -73,12 +73,14 @@
   --font-family-title: "Poppins", sans-serif;
   --font-size-text: .875rem;
   --font-size-title-1: 2.25rem;
+  --font-size-title-2: 1.375rem;
 }
 
 @media (min-width: 90rem) {
   :root {
     --font-size-text: 1rem;
     --font-size-title-1: 2.5rem;
+    --font-size-title-2: 1.5rem;
   }
 }
 * {
@@ -108,12 +110,21 @@ a, button {
   text-decoration: none;
 }
 
+h1, h2 {
+  line-height: 1.25;
+  text-transform: uppercase;
+}
+
 h1 {
   font-size: var(--font-size-title-1);
   font-weight: 600;
   letter-spacing: 0.25rem;
-  line-height: 1.25;
-  text-transform: uppercase;
+}
+
+h2 {
+  font-size: var(--font-size-title-2);
+  font-weight: 700;
+  letter-spacing: 0.125rem;
 }
 
 footer,
