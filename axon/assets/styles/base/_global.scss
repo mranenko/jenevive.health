@@ -22,10 +22,28 @@ a, button {
   color: inherit;
   cursor: pointer;
   font: inherit;
+  font-weight: 600;
   text-decoration: none;
 }
 
-h1, h2 {
+button {
+  align-items: center;
+  border: 0;
+  border-radius: .25rem;
+  display: flex;
+  gap: .625rem;
+  line-height: 1.25;
+  padding: .625rem 1.25rem;
+  i { font-size: 157.14%; }
+}
+
+.button-group {
+  display: flex;
+  flex-direction: row;
+  gap: .75rem;
+}
+
+h1, h2, h3 {
   line-height: 1.25;
   text-transform: uppercase;
 }
@@ -42,9 +60,23 @@ h2 {
   letter-spacing: .125rem;
 }
 
+h3 {
+  font-size: var(--font-size-title-3);
+  font-weight: 700;
+  letter-spacing: .125rem;
+}
+
+input {
+  border: 0;
+  border-radius: .25rem;
+  font: inherit;
+  padding: .625rem .75rem;
+}
+
 footer,
 header,
-main {
+main,
+section {
   align-items: center;
   background: none;
   color: inherit;
@@ -70,5 +102,12 @@ main {
 @media (min-width: 64rem) {
   .content {
     padding: 5rem 2rem;
+  }
+}
+
+@media (min-width: 90rem) {
+  button {
+    gap: .75rem;
+    i { font-size: 150%; }
   }
 }

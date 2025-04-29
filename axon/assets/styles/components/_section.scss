@@ -1,0 +1,49 @@
+section {
+  background: var(--color-background);
+  color: var(--color-foreground);
+
+  &.background-accent { background: var(--color-turquoise-50); }
+  &.background-light { background: var(--color-background-light); }
+  
+  &.endorsements .content {
+    align-items: center;
+    padding-bottom: 4rem;
+    padding-top: 4rem;
+  }
+
+  &.feature button {
+    background: var(--color-primary);
+    color: var(--color-foreground-contrast);
+  }
+
+  &.feature .content {
+    align-items: center;
+    gap: 2.5rem;
+  }
+
+  &.hero {
+    background: none;
+    color: inherit;
+    min-height: calc(100vh - 6.25rem);
+  }
+}
+
+@media (min-width: 64rem) {
+  section {
+    &.hero {
+      min-height: calc(100vh - 7.25rem);
+    }
+  }
+}
+
+@media (min-width: 90rem) {
+  section {
+    &.endorsements .content {
+      gap: 2.5rem;
+    }
+
+    &.hero {
+      min-height: calc(100vh - 7.5rem);
+    }
+  }
+}

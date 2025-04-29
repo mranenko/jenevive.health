@@ -4,19 +4,41 @@
   &.column { flex-direction: column; }
   &.row { flex-direction: row; }
 
+  &.gap-05 { gap: .5rem; }
   &.gap-075 { gap: .75rem; }
   &.gap-1 { gap: 1rem; }
   &.gap-125 { gap: 1.25rem; }
   &.gap-15 { gap: 1.25rem; }
   &.gap-1625 { gap: 1.625rem; }
+  &.gap-2 { gap: 2rem; }
+  &.gap-25 { gap: 2.5rem; }
+  &.gap-35 { gap: 3.5rem; }
+
+  &.items-center { align-items: center; }
 }
 
 @media (min-width: 64rem) {
+  .stack {
+    &.gap-1-md { gap: 1rem; }
+    &.gap-2-md { gap: 2rem; }
+
+    &.row-md { flex-direction: row; }
+
+    &.items-end-md { align-items: end; }
+    &.items-center-md { align-items: center; }
+    &.items-start-md { align-items: start; }
+  }
 }
 
 @media (min-width: 90rem) {
   .stack {
     &.gap-1-lg { gap: 1rem; }
     &.gap-2-lg { gap: 2rem; }
+
+    &.row-lg { flex-direction: row; }
+
+    &.items-end-lg { align-items: end; }
+    &.items-center-lg { align-items: center; }
+    &.items-start-lg { align-items: start; }
   }
 }
