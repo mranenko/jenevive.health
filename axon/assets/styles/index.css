@@ -72,17 +72,21 @@
   --font-family-text: "Poppins", sans-serif;
   --font-family-title: "Poppins", sans-serif;
   --font-size-text: .875rem;
+  --font-size-text-small: .75rem;
   --font-size-title-1: 2.25rem;
   --font-size-title-2: 1.375rem;
   --font-size-title-3: 1.125rem;
+  --font-size-title-4: 1rem;
 }
 
 @media (min-width: 90rem) {
   :root {
     --font-size-text: 1rem;
+    --font-size-text-small: .875rem;
     --font-size-title-1: 2.5rem;
     --font-size-title-2: 1.5rem;
     --font-size-title-3: 1.25rem;
+    --font-size-title-4: 1.125rem;
   }
 }
 * {
@@ -95,6 +99,7 @@ html,
 body {
   font: normal 16px/1.5 sans-serif;
   min-height: 100vh;
+  overflow-x: hidden;
   width: 100%;
 }
 
@@ -154,6 +159,13 @@ h3 {
   letter-spacing: 0.125rem;
 }
 
+h4 {
+  font-size: var(--font-size-title-4);
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  line-height: 1.25;
+}
+
 input {
   border: 0;
   border-radius: 0.25rem;
@@ -184,11 +196,10 @@ section {
 
 .page {
   background: var(--color-primary) url("../images/backgrounds/background-heart.png") no-repeat;
-  background-position: center 18vh;
-  background-size: 150%;
+  background-position: center 0;
+  background-size: auto 100vh;
   color: var(--color-foreground-contrast);
   display: grid;
-  grid-template-rows: auto 1fr auto;
 }
 
 .text-primary {
@@ -199,10 +210,6 @@ section {
   .content {
     padding: 5rem 2rem;
   }
-  .page {
-    background-position: center 0;
-    background-size: 100%;
-  }
 }
 @media (min-width: 90rem) {
   button {
@@ -212,7 +219,7 @@ section {
     font-size: 150%;
   }
   .page {
-    background-size: 90rem;
+    background-size: contain;
   }
 }
 button.light {
@@ -228,6 +235,23 @@ button.primary {
 button.secondary {
   background: var(--color-secondary);
   color: var(--color-primary);
+}
+
+.card {
+  background: var(--color-background-light);
+  border: 1px solid var(--color-border);
+  border-radius: 0.5rem;
+  color: var(--color-foreground);
+  display: flex;
+  flex-direction: column;
+  font-size: var(--font-size-text-small);
+  gap: 0.75rem;
+  padding: 1.5rem 2rem;
+}
+
+.card .avatar {
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
 }
 
 footer .content {
@@ -370,9 +394,13 @@ section.background-accent {
 section.background-light {
   background: var(--color-background-light);
 }
-section.endorsements .content {
+section.endorsements .content, section.feature .content, section.features .content, section.testimonials .content {
   align-items: center;
+  gap: 2.5rem;
+}
+section.endorsements .content {
   color: var(--color-foreground-subtle);
+  gap: 2rem;
   padding-bottom: 4rem;
   padding-top: 4rem;
 }
@@ -391,9 +419,27 @@ section.endorsements .logos .logo img {
   height: auto;
   width: 75%;
 }
-section.feature .content {
+section.features .card .header {
   align-items: center;
-  gap: 2.5rem;
+  display: flex;
+  flex-direction: row;
+  gap: 0.75rem;
+}
+section.features .card .header .icon {
+  align-items: center;
+  background: var(--color-secondary);
+  border-radius: 50%;
+  color: var(--color-primary);
+  display: flex;
+  font-size: 1.25rem;
+  height: 2.25rem;
+  justify-content: center;
+  width: 2.25rem;
+}
+section.features .cards {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-rows: 1fr 1fr 1fr;
 }
 section.hero {
   background: none;
@@ -408,13 +454,55 @@ section.hero .content {
 section.hero .content > * {
   max-width: 37.5rem;
 }
+section.testimonials .avatar {
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 3.5rem;
+  width: 3.5rem;
+}
+section.testimonials .avatar.user1 {
+  background-image: url("../images/users/user1.png");
+}
+section.testimonials .avatar.user2 {
+  background-image: url("../images/users/user2.png");
+}
+section.testimonials .avatar.user3 {
+  background-image: url("../images/users/user3.png");
+}
+section.testimonials .card {
+  width: 18.25rem;
+}
+section.testimonials .card .header {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  gap: 0.75rem;
+}
+section.testimonials .cards {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+section.testimonials .info {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
 
 @media (min-width: 64rem) {
   section.endorsements .logos {
     gap: 8rem;
   }
+  section.features .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+  }
   section.hero {
     min-height: calc(100vh - 7.25rem);
+  }
+  section.testimonials .card {
+    width: 23rem;
   }
 }
 @media (min-width: 90rem) {
@@ -429,6 +517,23 @@ section.hero .content > * {
   }
   section.hero {
     min-height: calc(100vh - 7.5rem);
+  }
+  section.testimonials .avatar {
+    height: 3.75rem;
+    width: 3.75rem;
+  }
+  section.testimonials .card {
+    width: 20.5rem;
+  }
+  section.testimonials .card .header {
+    gap: 1rem;
+  }
+  section.testimonials .content {
+    flex-direction: row;
+  }
+  section.testimonials .info {
+    align-items: start;
+    min-width: 28.125rem;
   }
 }
 .stack {

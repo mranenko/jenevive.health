@@ -5,13 +5,20 @@ section {
   &.background-accent { background: var(--color-turquoise-50); }
   &.background-light { background: var(--color-background-light); }
   
-  &.endorsements .content {
+  &.endorsements .content,
+  &.feature .content,
+  &.features .content,
+  &.testimonials .content {
     align-items: center;
+    gap: 2.5rem;
+  }
+
+  &.endorsements .content {
     color: var(--color-foreground-subtle);
+    gap: 2rem;
     padding-bottom: 4rem;
     padding-top: 4rem;
   }
-
   &.endorsements .logos {
     display: flex;
     flex-direction: row;
@@ -30,9 +37,29 @@ section {
     }
   }
 
-  &.feature .content {
-    align-items: center;
-    gap: 2.5rem;
+  &.features .card {
+    .header {
+      align-items: center;
+      display: flex;
+      flex-direction: row;
+      gap: .75rem;
+    }
+    .header .icon {
+      align-items: center;
+      background: var(--color-secondary);
+      border-radius: 50%;
+      color: var(--color-primary);
+      display: flex;
+      font-size: 1.25rem;
+      height: 2.25rem;
+      justify-content: center;
+      width: 2.25rem;
+    }
+  }
+  &.features .cards {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-rows: 1fr 1fr 1fr;
   }
 
   &.hero {
@@ -47,12 +74,50 @@ section {
     justify-content: center;
     > * { max-width: 37.5rem; }
   }
+
+  &.testimonials {
+    .avatar {
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 3.5rem;
+      width: 3.5rem;
+      &.user1 { background-image: url("../images/users/user1.png"); }
+      &.user2 { background-image: url("../images/users/user2.png"); }
+      &.user3 { background-image: url("../images/users/user3.png"); }
+    }
+
+    .card { width: 18.25rem; }
+    .card .header {
+      align-items: center;
+      display: flex;
+      flex-direction: row;
+      gap: .75rem;
+    }
+  }
+  &.testimonials .cards {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  &.testimonials .info {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+  }
 }
 
 @media (min-width: 64rem) {
   section {
     &.endorsements .logos { gap: 8rem; }
+    &.features .cards {
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: auto;
+    }
     &.hero { min-height: calc(100vh - 7.25rem); }
+    &.testimonials {
+      .card { width: 23rem; }
+    }
   }
 }
 
@@ -64,5 +129,17 @@ section {
       .logo img { width: 100%; }
     }
     &.hero { min-height: calc(100vh - 7.5rem); }
+    &.testimonials {
+      .avatar { height: 3.75rem; width: 3.75rem; }
+      .card { width: 20.5rem; }
+      .card .header { gap: 1rem; }
+    }
+    &.testimonials .content {
+      flex-direction: row;
+    }
+    &.testimonials .info {
+      align-items: start;
+      min-width: 28.125rem;
+    }
   }
 }
