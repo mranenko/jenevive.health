@@ -99,8 +99,6 @@ body {
 }
 
 body {
-  background: var(--color-primary);
-  color: var(--color-foreground-contrast);
   font-family: var(--font-family-text);
   font-size: var(--font-size-text);
 }
@@ -121,6 +119,7 @@ button {
   gap: 0.625rem;
   line-height: 1.25;
   padding: 0.625rem 1.25rem;
+  white-space: nowrap;
 }
 button i {
   font-size: 157.14%;
@@ -175,11 +174,6 @@ section {
   width: 100%;
 }
 
-.page {
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-}
-
 .content {
   display: flex;
   flex-direction: column;
@@ -188,9 +182,26 @@ section {
   width: 100%;
 }
 
+.page {
+  background: var(--color-primary) url("../images/backgrounds/background-heart.png") no-repeat;
+  background-position: center 18vh;
+  background-size: 150%;
+  color: var(--color-foreground-contrast);
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+.text-primary {
+  color: var(--color-primary);
+}
+
 @media (min-width: 64rem) {
   .content {
     padding: 5rem 2rem;
+  }
+  .page {
+    background-position: center 0;
+    background-size: 100%;
   }
 }
 @media (min-width: 90rem) {
@@ -200,7 +211,25 @@ section {
   button i {
     font-size: 150%;
   }
+  .page {
+    background-size: 90rem;
+  }
 }
+button.light {
+  background: var(--color-background-light);
+  color: var(--color-primary);
+}
+
+button.primary {
+  background: var(--color-primary);
+  color: var(--color-foreground-contrast);
+}
+
+button.secondary {
+  background: var(--color-secondary);
+  color: var(--color-primary);
+}
+
 footer .content {
   flex-direction: column-reverse;
   gap: 3.5rem;
@@ -230,10 +259,6 @@ footer .input-group {
 footer .input-group button,
 footer .input-group input {
   height: 2.5rem;
-}
-footer .input-group button {
-  background: var(--color-secondary);
-  color: var(--color-primary);
 }
 
 footer .social-icons {
@@ -347,12 +372,24 @@ section.background-light {
 }
 section.endorsements .content {
   align-items: center;
+  color: var(--color-foreground-subtle);
   padding-bottom: 4rem;
   padding-top: 4rem;
 }
-section.feature button {
-  background: var(--color-primary);
-  color: var(--color-foreground-contrast);
+section.endorsements .logos {
+  display: flex;
+  flex-direction: row;
+  gap: 4rem;
+}
+section.endorsements .logos .logo {
+  align-items: start;
+  display: flex;
+  justify-content: center;
+}
+section.endorsements .logos .logo img {
+  display: flex;
+  height: auto;
+  width: 75%;
 }
 section.feature .content {
   align-items: center;
@@ -363,8 +400,19 @@ section.hero {
   color: inherit;
   min-height: calc(100vh - 6.25rem);
 }
+section.hero .content {
+  align-items: start;
+  height: 100%;
+  justify-content: center;
+}
+section.hero .content > * {
+  max-width: 37.5rem;
+}
 
 @media (min-width: 64rem) {
+  section.endorsements .logos {
+    gap: 8rem;
+  }
   section.hero {
     min-height: calc(100vh - 7.25rem);
   }
@@ -372,6 +420,12 @@ section.hero {
 @media (min-width: 90rem) {
   section.endorsements .content {
     gap: 2.5rem;
+  }
+  section.endorsements .logos {
+    gap: 9rem;
+  }
+  section.endorsements .logos .logo img {
+    width: 100%;
   }
   section.hero {
     min-height: calc(100vh - 7.5rem);
@@ -409,6 +463,9 @@ section.hero {
 }
 .stack.gap-25 {
   gap: 2.5rem;
+}
+.stack.gap-3 {
+  gap: 3rem;
 }
 .stack.gap-35 {
   gap: 3.5rem;

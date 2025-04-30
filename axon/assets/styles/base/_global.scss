@@ -12,8 +12,6 @@ body {
 }
 
 body {
-  background: var(--color-primary);
-  color: var(--color-foreground-contrast);
   font-family: var(--font-family-text);
   font-size: var(--font-size-text);
 }
@@ -34,6 +32,7 @@ button {
   gap: .625rem;
   line-height: 1.25;
   padding: .625rem 1.25rem;
+  white-space: nowrap;
   i { font-size: 157.14%; }
 }
 
@@ -86,11 +85,6 @@ section {
   width: 100%;
 }
 
-.page {
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-}
-
 .content {
   display: flex;
   flex-direction: column;
@@ -99,9 +93,22 @@ section {
   width: 100%;
 }
 
+.page {
+  background: var(--color-primary) url("../images/backgrounds/background-heart.png") no-repeat;
+  background-position: center 18vh;
+  background-size: 150%;
+  color: var(--color-foreground-contrast);
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+.text-primary { color: var(--color-primary); }
+
 @media (min-width: 64rem) {
-  .content {
-    padding: 5rem 2rem;
+  .content { padding: 5rem 2rem; }
+  .page {
+    background-position: center 0;
+    background-size: 100%;
   }
 }
 
@@ -110,4 +117,5 @@ section {
     gap: .75rem;
     i { font-size: 150%; }
   }
+  .page { background-size: 90rem; }
 }

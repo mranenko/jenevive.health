@@ -16,6 +16,8 @@ Choose Vanilla JS.
 
 ## 2. Install
 
+In the project (`axon`) directory run:
+
 ```bash
 npm install --save-dev sass
 npm install @phosphor-icons/web
@@ -26,6 +28,8 @@ npm install
 
 
 ## 3. Run
+
+In the project (`axon`) directory run:
 
 ```bash
 npm start

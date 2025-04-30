@@ -1,0 +1,14 @@
+button.light {
+  background: var(--color-background-light);
+  color: var(--color-primary);
+}
+
+button.primary {
+  background: var(--color-primary);
+  color: var(--color-foreground-contrast);
+}
+
+button.secondary {
+  background: var(--color-secondary);
+  color: var(--color-primary);
+}

@@ -7,13 +7,27 @@ section {
   
   &.endorsements .content {
     align-items: center;
+    color: var(--color-foreground-subtle);
     padding-bottom: 4rem;
     padding-top: 4rem;
   }
 
-  &.feature button {
-    background: var(--color-primary);
-    color: var(--color-foreground-contrast);
+  &.endorsements .logos {
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
+
+    .logo {
+      align-items: start;
+      display: flex;
+      justify-content: center;
+    }
+
+    .logo img {
+      display: flex;
+      height: auto;
+      width: 75%;
+    }
   }
 
   &.feature .content {
@@ -26,24 +40,29 @@ section {
     color: inherit;
     min-height: calc(100vh - 6.25rem);
   }
+
+  &.hero .content {
+    align-items: start;
+    height: 100%;
+    justify-content: center;
+    > * { max-width: 37.5rem; }
+  }
 }
 
 @media (min-width: 64rem) {
   section {
-    &.hero {
-      min-height: calc(100vh - 7.25rem);
-    }
+    &.endorsements .logos { gap: 8rem; }
+    &.hero { min-height: calc(100vh - 7.25rem); }
   }
 }
 
 @media (min-width: 90rem) {
   section {
-    &.endorsements .content {
-      gap: 2.5rem;
+    &.endorsements .content { gap: 2.5rem; }
+    &.endorsements .logos {
+      gap: 9rem;
+      .logo img { width: 100%; }
     }
-
-    &.hero {
-      min-height: calc(100vh - 7.5rem);
-    }
+    &.hero { min-height: calc(100vh - 7.5rem); }
   }
 }
