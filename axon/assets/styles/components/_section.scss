@@ -18,11 +18,12 @@ section {
     gap: 2rem;
     padding-bottom: 4rem;
     padding-top: 4rem;
+    text-align: center;
   }
   &.endorsements .logos {
     display: flex;
     flex-direction: row;
-    gap: 4rem;
+    gap: 2.5rem;
 
     .logo {
       align-items: start;
@@ -33,7 +34,7 @@ section {
     .logo img {
       display: flex;
       height: auto;
-      width: 75%;
+      width: 60%;
     }
   }
 
@@ -98,6 +99,8 @@ section {
     display: grid;
     gap: 1.5rem;
     grid-template-columns: 1fr 1fr 1fr;
+    max-width: calc(100vw - 4rem);
+    overflow: visible;
   }
   &.testimonials .info {
     align-items: center;
@@ -109,7 +112,7 @@ section {
 
 @media (min-width: 64rem) {
   section {
-    &.endorsements .logos { gap: 8rem; }
+    &.endorsements .logos { gap: 4rem; }
     &.features .cards {
       grid-template-columns: 1fr 1fr 1fr;
       grid-template-rows: auto;
@@ -117,6 +120,7 @@ section {
     &.hero { min-height: calc(100vh - 7.25rem); }
     &.testimonials {
       .card { width: 23rem; }
+      .cards { max-width: calc(100vw - 5rem); }
     }
   }
 }
@@ -125,8 +129,8 @@ section {
   section {
     &.endorsements .content { gap: 2.5rem; }
     &.endorsements .logos {
-      gap: 9rem;
-      .logo img { width: 100%; }
+      gap: 6rem;
+      .logo img { width: 80%; }
     }
     &.hero { min-height: calc(100vh - 7.5rem); }
     &.testimonials {

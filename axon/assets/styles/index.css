@@ -403,11 +403,12 @@ section.endorsements .content {
   gap: 2rem;
   padding-bottom: 4rem;
   padding-top: 4rem;
+  text-align: center;
 }
 section.endorsements .logos {
   display: flex;
   flex-direction: row;
-  gap: 4rem;
+  gap: 2.5rem;
 }
 section.endorsements .logos .logo {
   align-items: start;
@@ -417,7 +418,7 @@ section.endorsements .logos .logo {
 section.endorsements .logos .logo img {
   display: flex;
   height: auto;
-  width: 75%;
+  width: 60%;
 }
 section.features .card .header {
   align-items: center;
@@ -482,6 +483,8 @@ section.testimonials .cards {
   display: grid;
   gap: 1.5rem;
   grid-template-columns: 1fr 1fr 1fr;
+  max-width: calc(100vw - 4rem);
+  overflow: visible;
 }
 section.testimonials .info {
   align-items: center;
@@ -492,7 +495,7 @@ section.testimonials .info {
 
 @media (min-width: 64rem) {
   section.endorsements .logos {
-    gap: 8rem;
+    gap: 4rem;
   }
   section.features .cards {
     grid-template-columns: 1fr 1fr 1fr;
@@ -504,16 +507,19 @@ section.testimonials .info {
   section.testimonials .card {
     width: 23rem;
   }
+  section.testimonials .cards {
+    max-width: calc(100vw - 5rem);
+  }
 }
 @media (min-width: 90rem) {
   section.endorsements .content {
     gap: 2.5rem;
   }
   section.endorsements .logos {
-    gap: 9rem;
+    gap: 6rem;
   }
   section.endorsements .logos .logo img {
-    width: 100%;
+    width: 80%;
   }
   section.hero {
     min-height: calc(100vh - 7.5rem);
