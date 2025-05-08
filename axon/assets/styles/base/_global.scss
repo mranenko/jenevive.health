@@ -102,17 +102,17 @@ section {
 }
 
 .page {
-  background: var(--color-primary) url("../images/backgrounds/background-heart.png") no-repeat;
-  // background: var(--color-primary);
-  background-position: center 0;
-  background-size: auto 100vh;
+  background: var(--color-primary);
   color: var(--color-foreground-contrast);
-  // display: grid;
   display: flex;
   flex-direction: column;
 }
 
 .text-primary { color: var(--color-primary); }
+
+@media (max-width: 23.5rem) {
+  .button-group { align-self: start; }
+}
 
 @media (min-width: 64rem) {
   .content { padding: 5rem 2rem; }

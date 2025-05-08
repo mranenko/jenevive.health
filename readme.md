@@ -47,10 +47,13 @@ npm start
 ---
 
 
-#### Code + Demo
+#### Design + Code + Demo
 
-##### Repository
+##### Figma Design
+https://www.figma.com/design/vT2vGIslxd1zPkihcnFvUY/jenevive.health-2025-DEMO
+
+##### Github Repository
 https://github.com/mranenko/jenevive.health
 
-##### Demo
+##### Website Demo
 https://jenevive.netlify.app
