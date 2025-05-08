@@ -199,7 +199,8 @@ section {
   background-position: center 0;
   background-size: auto 100vh;
   color: var(--color-foreground-contrast);
-  display: grid;
+  display: flex;
+  flex-direction: column;
 }
 
 .text-primary {
@@ -384,6 +385,10 @@ header .nav-toggle span:last-of-type {
     letter-spacing: 0.75rem;
   }
 }
+main {
+  flex: 1;
+}
+
 section {
   background: var(--color-background);
   color: var(--color-foreground);
@@ -445,7 +450,9 @@ section.features .cards {
 section.hero {
   background: none;
   color: inherit;
+  justify-content: center;
   min-height: calc(100vh - 6.25rem);
+  z-index: -2;
 }
 section.hero .content {
   align-items: start;

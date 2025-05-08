@@ -103,10 +103,13 @@ section {
 
 .page {
   background: var(--color-primary) url("../images/backgrounds/background-heart.png") no-repeat;
+  // background: var(--color-primary);
   background-position: center 0;
   background-size: auto 100vh;
   color: var(--color-foreground-contrast);
-  display: grid;
+  // display: grid;
+  display: flex;
+  flex-direction: column;
 }
 
 .text-primary { color: var(--color-primary); }
