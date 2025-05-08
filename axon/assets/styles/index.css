@@ -454,22 +454,12 @@ section.features .cards {
   grid-template-rows: 1fr 1fr 1fr;
 }
 section.hero {
-  background: linear-gradient(135deg, transparent, rgba(97, 216, 229, 0.5) 75%);
+  background: none;
+  background-image: radial-gradient(at 68% 4%, hsla(186, 72%, 64%, 0.4) 0, transparent 100%), radial-gradient(at 20% 80%, hsla(237, 50%, 64%, 0.25) 0, transparent 75%);
   color: inherit;
   justify-content: center;
   min-height: 100vh;
   padding: 6.25rem 0 0;
-}
-section.hero .glass {
-  background: linear-gradient(90deg, transparent, transparent 0.75rem, rgba(255, 255, 255, 0.05) 3rem);
-  background-size: 4rem 100%;
-  height: 100%;
-  width: 100%;
-  backdrop-filter: blur(0.65rem);
-  filter: contrast(1.35);
-  position: absolute;
-  z-index: -1;
-  inset: 0;
 }
 section.hero .content {
   align-items: start;
