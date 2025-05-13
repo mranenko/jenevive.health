@@ -8,6 +8,7 @@ html,
 body {
   font: normal 16px/1.5 sans-serif;
   min-height: 100vh;
+  min-width: 22.5rem;
   overflow-x: hidden;
   width: 100%;
 }
@@ -32,9 +33,9 @@ button {
   display: flex;
   gap: .625rem;
   line-height: 1.25;
-  padding: .625rem 1.25rem;
+  padding: .75rem 1.25rem;
   white-space: nowrap;
-  i { font-size: 157.14%; }
+  i { font-size: 112.5%; }
 }
 
 .button-group {
@@ -119,9 +120,5 @@ section {
 }
 
 @media (min-width: 90rem) {
-  button {
-    gap: .75rem;
-    i { font-size: 150%; }
-  }
   .page { background-size: contain; }
 }
